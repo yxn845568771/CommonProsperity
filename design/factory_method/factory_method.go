@@ -59,6 +59,6 @@ func GenMilkFactory(animal AnimalType) (MilkFactory, error) {
 			Taste: "狗都不喝",
 		}}, nil
 	default:
-		return nil, errors.New("这边建议你和豆浆")
+		return nil, errors.New("这边建议你喝豆浆")
 	}
 }
