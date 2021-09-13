@@ -1,5 +1,11 @@
 package prototype
 
+type Animal struct {
+	Name   string
+	Price  float64
+	Weight float64
+}
+
 type Pig struct {
 	Name   string
 	Price  float64
