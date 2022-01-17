@@ -1,5 +1,7 @@
 package command
 
+// TODO
+
 type Request struct {
 	command Command
 }
