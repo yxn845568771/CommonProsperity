@@ -6,11 +6,15 @@ import (
 	"time"
 )
 
+// Sms 具体实现类
 type Sms struct {
+	notify Notify
 }
 
-func NewSms() INotify {
-	return &Sms{}
+func NewSms(notify Notify) INotify {
+	return &Sms{
+		notify: notify,
+	}
 }
 
 func (s *Sms) genRandomCode(i int) string {
@@ -20,24 +24,6 @@ func (s *Sms) genRandomCode(i int) string {
 }
 
 func (s *Sms) sendVerifyCode(account, msg string, option ...interface{}) error {
-	fmt.Println("Graceful sendVerifyCode")
+	fmt.Println("Graceful Sms sendVerifyCode")
 	return nil
-}
-
-func (s *Sms) getCache(msg string) string {
-	// get code redis db
-	// return redis result
-	fmt.Println("Graceful getCache")
-	return "fedcba"
-}
-
-func (s *Sms) setCache(msg string) error {
-	// set code to redis db
-	fmt.Println("Graceful setCache")
-	return nil
-}
-
-func (s *Sms) publicHooks() {
-	fmt.Println("Graceful publicHooks")
-	return
 }

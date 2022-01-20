@@ -6,11 +6,15 @@ import (
 	"time"
 )
 
+// Email 具体实现类
 type Email struct {
+	notify Notify
 }
 
-func NewEmail() INotify {
-	return &Email{}
+func NewEmail(notify Notify) INotify {
+	return &Email{
+		notify: notify,
+	}
 }
 
 func (e *Email) genRandomCode(i int) string {
@@ -20,24 +24,6 @@ func (e *Email) genRandomCode(i int) string {
 }
 
 func (e *Email) sendVerifyCode(account, msg string, option ...interface{}) error {
-	fmt.Println("Graceful sendVerifyCode")
+	fmt.Println("Graceful Email sendVerifyCode")
 	return nil
-}
-
-func (e *Email) getCache(s string) string {
-	// get code redis db
-	// return redis result
-	fmt.Println("Graceful getCache")
-	return "abcdef"
-}
-
-func (e *Email) setCache(s string) error {
-	// set code to redis db
-	fmt.Println("Graceful setCache")
-	return nil
-}
-
-func (e *Email) publicHooks() {
-	fmt.Println("Graceful publicHooks")
-	return
 }
