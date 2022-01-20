@@ -25,7 +25,7 @@ import (
 // 	models    []string
 // }
 //
-// type design struct {
+// type algorithm struct {
 // 	opts options
 // }
 //
@@ -39,7 +39,7 @@ import (
 // func
 //
 // func init() {
-// 	design.employees = map[string]int{
+// 	algorithm.employees = map[string]int{
 // 		"晓南": 1,
 // 		"晓霖": 1,
 // 		"晓炜": 1,
@@ -48,7 +48,7 @@ import (
 // 		"敬朋": 1,
 // 		"先杰": 1,
 // 	}
-// 	design.models = []string{
+// 	algorithm.models = []string{
 // 		"建造者", "抽象工厂",
 // 		"适配器", "桥接", "组合", "装饰", "代理", "外观", "享元",
 // 		"迭代器", "中介者", "观察者", "策略", "模板方法", "命令",
