@@ -1,8 +1,8 @@
 package main
 
 func main() {
-	sms := &Sms{}
+	sms := NewSms()
 	sms.genRandomCode(3)
-	email := &Email{}
+	email := NewEmail()
 	email.genRandomCode(6)
 }

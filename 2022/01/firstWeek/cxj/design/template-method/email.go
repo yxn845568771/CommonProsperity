@@ -7,7 +7,10 @@ import (
 )
 
 type Email struct {
-	notify Notify
+}
+
+func NewEmail() INotify {
+	return &Email{}
 }
 
 func (e *Email) genRandomCode(i int) string {

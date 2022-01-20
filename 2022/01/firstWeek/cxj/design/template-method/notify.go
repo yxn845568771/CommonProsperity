@@ -8,10 +8,14 @@ type INotify interface {
 	publicHooks()                                                    // 公共hook
 }
 
-type Notify struct {
-	ify INotify
-}
-
+// type Notify struct {
+// 	url string
+// }
+//
+// func NewNotify(url string) INotify {
+// 	return &Notify{url}
+// }
+//
 // func (n *Notify) genRandomCode(i int) string {
 // 	code := fmt.Sprintf("%06v", rand.New(rand.NewSource(time.Now().UnixNano())).Int31n(int32(i)))
 // 	return code
@@ -28,7 +32,7 @@ type Notify struct {
 // func (n *Notify) setCache(s string) error {
 // 	panic("implement me")
 // }
-
-func (n *Notify) publicHooks() {
-	panic("implement me")
-}
+//
+// func (n *Notify) publicHooks() {
+// 	panic("implement me")
+// }

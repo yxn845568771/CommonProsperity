@@ -7,7 +7,10 @@ import (
 )
 
 type Sms struct {
-	notify Notify
+}
+
+func NewSms() INotify {
+	return &Sms{}
 }
 
 func (s *Sms) genRandomCode(i int) string {
